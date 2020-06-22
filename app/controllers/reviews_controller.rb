@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   @review = Review.new(review_params)
   @review.motel = @motel
   if @review.save
-   redirect_to motel_path(@motel)
+   redirect_to motel_path(@motel, anchor: "review-#{@review.id}")
   else
    render 'motels/show'
   end

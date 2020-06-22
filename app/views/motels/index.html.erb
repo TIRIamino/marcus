@@ -7,3 +7,12 @@
 </ul>
 
 
+
+<ul>
+  <% @motels.each do |motel| %>
+    <li>
+      <%= motel.name %>
+      <%= link_to "Delete", motel, method: :delete, remote: true %>
+    </li>
+  <% end %>
+</ul>
