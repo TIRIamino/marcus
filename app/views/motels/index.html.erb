@@ -1,0 +1,9 @@
+<h1>Motels</h1>
+
+<ul>
+ <% @motels.each do | motel | %>
+   <li><%= link_to motel.name, motel_path(motel) %></li>
+ <% end %>
+</ul>
+
+
