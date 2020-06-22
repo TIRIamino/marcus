@@ -5,5 +5,6 @@ class MotelsController < ApplicationController
 
  def show
   @motel = Motel.find(params[:id])
+  @review = Review.new
  end
 end
